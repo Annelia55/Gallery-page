@@ -1,0 +1,2 @@
+# Gallery-page
+bootstrap
