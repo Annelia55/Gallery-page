@@ -82,13 +82,58 @@ a {
     font-size: 25px;
     line-height: 15px;
     padding-top: 20px;
-    right: 20px; /* выравнивает по правому краю */
+    right: 20px;        /* выравнивает по правому краю */
     cursor: pointer;
     color: #cfcecd;
-    display: none; /* скрывает иконку */
+    display: none;      /* скрывает иконку */
 }
 
+/* Content */
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: -20px 0 30px 0;
+
+}
+.card {
+    margin-bottom: 50px;
+}
+.card > p {
+    color: #9f9e9e;
+    margin-top: -5px;
+}
+.card > a > img {
+    max-width: 350px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+         -o-border-radius: 10px;
+            border-radius: 10px;
+}
+.card > a > img:hover {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
+       -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
+         -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
+    transition: all .5s;
+}
+/* Pages */
+.nav-pages {
+    text-align: center;
+}
+.nav-pages .pagination > li > a {
+    color: #c3c2c1;
+}
+.nav-pages .pagination > li > a:hover {
+    background: rgba(241, 240, 239, 0.07);
+}
+
+
 /* @media */
+@media only screen and (max-width: 1200px) {
+    .card > a > img {
+        max-width: 300px;
+    }
+}
 @media only screen and (min-width: 993px) {
     .icons {                         /* block + !important возвращает видимость иконок т.к. после применения slideToggle() они не отображались. */
         display: block !important;
@@ -102,7 +147,7 @@ a {
         top: 58px;
     }
     .icons li {
-        float: none; /* иконки размещаются по вертикали */
+        float: none;    /* иконки размещаются по вертикали */
     }
     .icons li a {
         padding: 3px;
@@ -113,6 +158,9 @@ a {
     }
 }
 @media only screen and (max-width: 767px) {
+    header {
+        margin: 25px 0 40px;
+    }
     .menu {
         padding: 0;
     }
@@ -126,11 +174,11 @@ a {
         background: rgba(207, 206, 205, 0.24);
     }
     .navbar-collapse {
-        background: rgba(171, 170, 169, 0.07); /* фон выезжающего меню */
+        background: rgba(241, 240, 239, 0.07);      /* фон выезжающего меню */
     }
     .navbar-nav > li > a {
         text-align: center;
-        transition: all .35s; /* плавный переход */
+        transition: all .35s;    /* плавный переход */
     }
     .icons {
         position: relative;
@@ -144,6 +192,18 @@ a {
     }
     .globe {
         display: none;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .card {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .card > a > img {
+        max-width: 380px;
+
     }
 
 }
